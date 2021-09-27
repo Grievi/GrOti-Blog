@@ -1,16 +1,16 @@
+from instance.config import SECRET_KEY
 import os
+
 
 class Config:
     '''
     General configurations parent class
     '''
-    
+    SECRET_KEY='fullstackwebdeveloper'
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:otieno@localhost/myblog'
     SECRET_KEY = os.environ.get('SECRET_KEY')
     UPLOADED_PHOTOS_DEST ='app/static/photos'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-
-    # email configurations
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
     MAIL_USE_TLS = True
@@ -31,7 +31,7 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SECRET_KEY='fullstackwebdeveloper'
+    SQLALCHEMY_DATABASE_URI= os.environ.get("DATABASE_URL")
 
 class TestConfig(Config):
     '''
