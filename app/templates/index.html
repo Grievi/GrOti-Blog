@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+<!-- Styles block -->
+
+{%block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{%endblock%}
+<!-- Content block -->
+{%block content%}
+<div class="jumbotron text-center" style="background-color: #3d7aaf; color: #fff; padding: 100px 25px;">
+    
+</div>
+<section class="homepage">
+    <div class="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 text-center">
+                    <div class="homepage-content">
+                        <h3>
+                            <q>
+                                {{ quote.quote }}
+                            </q>
+                        </h3>
+                        <p class="author mt-2">
+                            -{{ quote.author }}
+                        </p>
+                        <a href="#posts" class="btn mt-5 b-r">
+                            view recents posts
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{%endblock%}

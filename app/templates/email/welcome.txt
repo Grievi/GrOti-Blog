@@ -1,0 +1,3 @@
+Hi {{user.username}}
+Welcome to GrOti_Blog
+You have signed up for our application we hope that you will find it useful and educative.
