@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+
+{%block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cookie&display=swap" rel="stylesheet">
+{%endblock%} 
+
+{%block content%}
+<div class="jumbotron text-center" style="background-image:linear-gradient(#3BA5BF,#3EA286,#0386A4); color: #fff; padding: 100px 25px;">
+    <h1 style="font-family: 'Cookie', cursive;" class="categories">Future Technologies</h1>
+</div>
+<div class="container">
+    <h1 style="font-family: 'Cookie', cursive;" class="categories">Future Technologies</h1>
+    <hr>
+    <div class="row">
+        {{macro.displayBlogs(blogs)}}
+    </div>
+</div>
+{%endblock%}

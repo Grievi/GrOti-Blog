@@ -4,9 +4,7 @@ class Config:
     '''
     General configurations parent class
     '''
-    # SECRET_KEY = os.urandom(32)
-    # SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
-    # app.config['SECRET_KEY'] = SECRET_KEY
+    
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:otieno@localhost/myblog'
     SECRET_KEY = os.environ.get('SECRET_KEY')
     UPLOADED_PHOTOS_DEST ='app/static/photos'
@@ -33,7 +31,7 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    pass
+    SECRET_KEY='fullstackwebdeveloper'
 
 class TestConfig(Config):
     '''
