@@ -1,3 +1,7 @@
 *{
     background:linear-gradient(#EDEEF2,#96816E,#877871) ;
 }
+.banner{
+    background-image:url(../static/photos/top.jpg);
+    height: 60vh;
+}
