@@ -33,7 +33,7 @@ chmod a+x start.sh
 * Navigate to your browser on http://127.0.0.1:5000/ to view the app
 
 ## Known Bugs
-None at the moment.
+import different styling changes making the site different locally from hosted one... will fix it in the near future
 ## Technologies used
 * Flask
 * Python
